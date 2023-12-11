@@ -5,7 +5,7 @@ import UI.ViewController.UIModels.GameUIModel;
 import javafx.scene.layout.Pane;
 
 public interface GameView {
-    public void configureView(GameUIModel uiModel);
-    public Pane getView();
+    void configureView(GameUIModel uiModel);
+    Pane getView();
     void setOnButtonClickListener(OnButtonClickListener listener);
 }

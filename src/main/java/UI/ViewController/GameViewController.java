@@ -25,7 +25,7 @@ public class GameViewController {
         stage.setScene(scene);
         stage.show();
         viewModel.getInput().onNext(GameViewModelInput.VIEW_APPEARED);
-    };
+    }
 
     void bindViewModel(){
         compositeDisposable.add(
@@ -45,7 +45,7 @@ public class GameViewController {
                 case "scissors" -> viewModel.getInput().onNext(GameViewModelInput.SCISSORS_BUTTON_CLICKED);
                 }
         });
-    };
+    }
 
 
 }

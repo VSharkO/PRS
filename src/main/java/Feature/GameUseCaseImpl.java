@@ -12,9 +12,7 @@ public class GameUseCaseImpl implements GameUseCase {
     public GameUseCaseImpl(MoveService moveService) {
         this.moveService = moveService;
 
-        moveService.setOnMoveReceivedListener(move -> {
-            output.gameUseCaseOutput(getGameResult(this.playerMove, move));
-        });
+        moveService.setOnMoveReceivedListener(move -> output.gameUseCaseOutput(getGameResult(this.playerMove, move)));
     }
     @Override
     public void setGameUseCaseOutputListener(OnUseCaseOutputListener outputListener) {

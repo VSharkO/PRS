@@ -44,7 +44,7 @@ public class GameViewModelImpl implements GameViewModel {
             case ROCK_BUTTON_CLICKED -> playerMove = Move.ROCK;
             case SCISSORS_BUTTON_CLICKED -> playerMove = Move.SCISSORS;
             case VIEW_APPEARED -> {
-                this.gameUIModel = createModel("");
+                this.gameUIModel = createModel();
                 return Observable.just(gameUIModel);
             }
         }
@@ -53,22 +53,20 @@ public class GameViewModelImpl implements GameViewModel {
     }
 
     private GameUIModel mapUseCaseOutputToVMOutput(GameResult result){
-        this.gameUIModel.resultString = "Computer played: " + result.getComputerMove() + "\nResult: " + result.getResult();;
+        this.gameUIModel.resultString = "Computer played: " + result.getComputerMove() + "\nResult: " + result.getResult();
         return this.gameUIModel;
-    };
-
-    private void subscribeToUseCaseOutput(){
-        gameUseCase.setGameUseCaseOutputListener(useCaseOutput -> {
-            output.onNext(this.mapUseCaseOutputToVMOutput(useCaseOutput));
-        });
     }
 
-    private GameUIModel createModel(String resultString){
+    private void subscribeToUseCaseOutput(){
+        gameUseCase.setGameUseCaseOutputListener(useCaseOutput -> output.onNext(this.mapUseCaseOutputToVMOutput(useCaseOutput)));
+    }
+
+    private GameUIModel createModel(){
         ArrayList<GameButtonUIModel> buttons = new ArrayList<>();
         buttons.add(new GameButtonUIModel("Paper", "paper"));
         buttons.add(new GameButtonUIModel("Rock", "rock"));
         buttons.add(new GameButtonUIModel("Scissors", "scissors"));
-        return new GameUIModel(resultString, buttons);
+        return new GameUIModel("", buttons);
     }
 }
 
