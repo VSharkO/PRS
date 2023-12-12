@@ -1,6 +1,6 @@
-package Feature.MoveService;
+package PRSGame.Feature.MoveService;
 
-import Domain.Move;
+import PRSGame.Domain.Move;
 
 @FunctionalInterface
 public interface OnMoveReceived {

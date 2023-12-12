@@ -1,8 +1,9 @@
-package UI.View;
+package PRSGame.UI.View;
 
-import UI.ViewController.UIModels.GameButtonUIModel;
-import UI.ViewController.UIModels.GameUIModel;
-import UI.ViewController.GameView;
+import PRSGame.UI.ViewController.UIModels.GameButtonUIModel;
+import PRSGame.UI.ViewController.UIModels.GameUIModel;
+import PRSGame.UI.ViewController.GameView;
+import PRSGame.UI.ViewController.UIModels.OnButtonClickListener;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -43,5 +44,9 @@ public class GameViewImpl implements GameView {
     @Override
     public void setOnButtonClickListener(OnButtonClickListener listener) {
         this.buttonClickListener = listener;
-    };
+    }
 }
+
+
+
+

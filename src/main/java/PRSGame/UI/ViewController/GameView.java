@@ -1,7 +1,7 @@
-package UI.ViewController;
+package PRSGame.UI.ViewController;
 
-import UI.View.OnButtonClickListener;
-import UI.ViewController.UIModels.GameUIModel;
+import PRSGame.UI.ViewController.UIModels.OnButtonClickListener;
+import PRSGame.UI.ViewController.UIModels.GameUIModel;
 import javafx.scene.layout.Pane;
 
 public interface GameView {

@@ -1,6 +1,6 @@
-package UI.ViewModel;
+package PRSGame.UI.ViewModel;
 
-import UI.ViewController.UIModels.GameUIModel;
+import PRSGame.UI.ViewController.UIModels.GameUIModel;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.subjects.PublishSubject;
 

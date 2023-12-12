@@ -7,12 +7,18 @@ module org.example.prs {
 
     opens org.example.prs to javafx.fxml;
     exports org.example.prs;
-    exports UI.View;
-    opens UI.View to javafx.fxml;
-    exports UI.ViewModel;
-    opens UI.ViewModel to javafx.fxml;
-    exports UI.ViewController;
-    opens UI.ViewController to javafx.fxml;
-    exports UI.ViewController.UIModels;
-    opens UI.ViewController.UIModels to javafx.fxml;
+    exports PRSGame.UI.View;
+    opens PRSGame.UI.View to javafx.fxml;
+    exports PRSGame.UI.ViewModel;
+    opens PRSGame.UI.ViewModel to javafx.fxml;
+    exports PRSGame.UI.ViewController;
+    opens PRSGame.UI.ViewController to javafx.fxml;
+    exports PRSGame.UI.ViewController.UIModels;
+    opens PRSGame.UI.ViewController.UIModels to javafx.fxml;
+    exports PRSGame.Feature;
+    opens PRSGame.Feature to javafx.fxml;
+    exports org.example.prs.Decorators;
+    opens org.example.prs.Decorators to javafx.fxml;
+    exports org.example.prs.MoveRepository;
+    opens org.example.prs.MoveRepository to javafx.fxml;
 }

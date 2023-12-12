@@ -1,6 +1,6 @@
-package Feature.GameUseCase;
+package PRSGame.Feature.GameUseCase;
 
-import Domain.Move;
+import PRSGame.Domain.Move;
 
 public interface GameUseCase{
     void playMove(Move playerMove);

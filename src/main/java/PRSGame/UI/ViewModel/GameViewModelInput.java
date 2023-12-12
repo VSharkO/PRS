@@ -1,4 +1,4 @@
-package UI.ViewModel;
+package PRSGame.UI.ViewModel;
 
 public enum GameViewModelInput {
     PAPER_BUTTON_CLICKED,

@@ -1,4 +1,4 @@
-package Domain;
+package PRSGame.Domain;
 
 public class GameResult {
     Result result;

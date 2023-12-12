@@ -1,6 +1,6 @@
-package Feature.GameUseCase;
+package PRSGame.Feature.GameUseCase;
 
-import Domain.GameResult;
+import PRSGame.Domain.GameResult;
 
 @FunctionalInterface
 public interface OnUseCaseOutputListener {

@@ -1,18 +1,19 @@
-package Feature;
-import Domain.*;
-import Domain.GameResult;
-import Feature.GameUseCase.GameUseCase;
-import Feature.GameUseCase.OnUseCaseOutputListener;
-import Feature.MoveService.MoveService;
+package PRSGame.Feature;
+import PRSGame.Domain.*;
+import PRSGame.Feature.GameUseCase.GameUseCase;
+import PRSGame.Feature.GameUseCase.OnUseCaseOutputListener;
+import PRSGame.Feature.MoveService.MoveService;
 
 public class GameUseCaseImpl implements GameUseCase {
     OnUseCaseOutputListener output;
-    private MoveService moveService;
+    private final MoveService moveService;
     Move playerMove = null;
+
     public GameUseCaseImpl(MoveService moveService) {
         this.moveService = moveService;
-
-        moveService.setOnMoveReceivedListener(move -> output.gameUseCaseOutput(getGameResult(this.playerMove, move)));
+        moveService.setOnMoveReceivedListener(
+                move -> output.gameUseCaseOutput(getGameResult(this.playerMove, move))
+        );
     }
     @Override
     public void setGameUseCaseOutputListener(OnUseCaseOutputListener outputListener) {
@@ -35,4 +36,6 @@ public class GameUseCaseImpl implements GameUseCase {
         }
     }
 }
+
+
 

@@ -1,4 +1,4 @@
-package Feature.MoveService;
+package PRSGame.Feature.MoveService;
 
 public interface MoveService {
     void getMove();

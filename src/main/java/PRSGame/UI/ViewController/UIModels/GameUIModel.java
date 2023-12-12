@@ -1,4 +1,4 @@
-package UI.ViewController.UIModels;
+package PRSGame.UI.ViewController.UIModels;
 
 import java.util.ArrayList;
 
@@ -12,3 +12,5 @@ public class GameUIModel {
         this.gameButtons = gameButtons;
     }
 }
+
+

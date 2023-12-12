@@ -1,8 +1,8 @@
 package org.example.prs;
 
-import Domain.Move;
-import Feature.MoveService.MoveService;
-import Feature.MoveService.OnMoveReceived;
+import PRSGame.Domain.Move;
+import PRSGame.Feature.MoveService.MoveService;
+import PRSGame.Feature.MoveService.OnMoveReceived;
 import java.util.Random;
 
 public class MoveServiceImpl implements MoveService {
@@ -24,3 +24,5 @@ public class MoveServiceImpl implements MoveService {
         return moves[randomIndex];
     }
 }
+
+

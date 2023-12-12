@@ -1,7 +1,6 @@
-package UI.ViewController;
-
-import UI.ViewModel.GameViewModel;
-import UI.ViewModel.GameViewModelInput;
+package PRSGame.UI.ViewController;
+import PRSGame.UI.ViewModel.GameViewModel;
+import PRSGame.UI.ViewModel.GameViewModelInput;
 import io.reactivex.disposables.CompositeDisposable;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
@@ -29,9 +28,7 @@ public class GameViewController {
 
     void bindViewModel(){
         compositeDisposable.add(
-                viewModel.getOutput().subscribe(gameUiModel -> {
-                    view.configureView(gameUiModel);
-                })
+                viewModel.getOutput().subscribe(gameUiModel -> view.configureView(gameUiModel))
         );
 
         compositeDisposable.add(

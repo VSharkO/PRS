@@ -1,9 +1,9 @@
-package UI.ViewModel;
-import Domain.*;
-import Domain.GameResult;
-import Feature.GameUseCase.GameUseCase;
-import UI.ViewController.UIModels.GameButtonUIModel;
-import UI.ViewController.UIModels.GameUIModel;
+package PRSGame.UI.ViewModel;
+import PRSGame.Domain.*;
+import PRSGame.Domain.GameResult;
+import PRSGame.Feature.GameUseCase.GameUseCase;
+import PRSGame.UI.ViewController.UIModels.GameButtonUIModel;
+import PRSGame.UI.ViewController.UIModels.GameUIModel;
 import io.reactivex.Observable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.subjects.PublishSubject;
@@ -15,7 +15,6 @@ public class GameViewModelImpl implements GameViewModel {
     public PublishSubject<GameViewModelInput> input;
     public PublishSubject<GameUIModel> output;
     private GameUIModel gameUIModel;
-
     public GameViewModelImpl(GameUseCase gameUseCase,
                              PublishSubject<GameViewModelInput> input,
                              PublishSubject<GameUIModel> output) {

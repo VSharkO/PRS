@@ -1,4 +1,4 @@
-package UI.View;
+package PRSGame.UI.ViewController.UIModels;
 
 @FunctionalInterface
 public interface OnButtonClickListener {
