@@ -15,18 +15,13 @@ public class SaveMoveServiceDecorator implements MoveService {
 
     @Override
     public void getMove() {
-        // Call the original getMove method on the decoratee
         decoratee.getMove();
     }
 
     @Override
     public void setOnMoveReceivedListener(OnMoveReceived onMoveReceivedListener) {
-        // Set the listener on the decoratee
         decoratee.setOnMoveReceivedListener(move -> {
-            // Save the move using the composite repository
             moveRepository.saveMove(move);
-
-            // Trigger the listener provided by the decorator
             onMoveReceivedListener.onMoveReceived(move);
         });
     }

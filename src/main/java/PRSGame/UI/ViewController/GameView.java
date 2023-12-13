@@ -9,3 +9,6 @@ public interface GameView {
     Pane getView();
     void setOnButtonClickListener(OnButtonClickListener listener);
 }
+
+
+

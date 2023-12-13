@@ -21,8 +21,8 @@ public class GameUseCaseImpl implements GameUseCase {
     }
     @Override
     public void playMove(Move playerMove) {
-        moveService.getMove();
         this.playerMove = playerMove;
+        moveService.getMove();
     }
     private GameResult getGameResult(Move playerMove, Move computerMove){
         if (playerMove == computerMove) {
